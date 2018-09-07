@@ -38,7 +38,7 @@ if [ "$ALLOW_STATIC_SERV" = true ] ; then
     mkdir "$COURSEBUILDER_RESOURCES/_static/"
   fi
   if [ ! -L "$LN_SOURCE/_static" -a ! -d "$LN_SOURCE/_static" ]; then
-    ln -s "$COURSEBUILDER_RESOURCES/_static/" "$LN_SOURCE/"
+    cp "$COURSEBUILDER_RESOURCES/_static/" "$LN_SOURCE/"
   fi
 
   # Unzip required files
