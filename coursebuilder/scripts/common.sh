@@ -406,7 +406,7 @@ for lib in $DISTRIBUTED_LIBS ; do
   fi
   if [ "$IS_NEW" = true ] || [ ! -f "$DISTRIBUTED_LIBS_DIR/$lib" ]; then
     rm -rf "$DISTRIBUTED_LIBS_DIR/$lib"
-    ln -s "$COURSEBUILDER_RESOURCES/lib/$lib" "$DISTRIBUTED_LIBS_DIR/$lib"
+    cp "$COURSEBUILDER_RESOURCES/lib/$lib" "$DISTRIBUTED_LIBS_DIR/$lib"
   fi
 done
 
